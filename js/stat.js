@@ -25,8 +25,8 @@ window.renderStatistics = function (ctx, names, times) {
   var histogramHeight = 150;
   var step = histogramHeight / (max);
   var barWidth = 40;
-  var indent = 50;
-  var initialX = 120;
+  var indent = 90;
+  var initialX = 150;
   var initialY = 240;
 
   for (i = 0; i < times.length; i++) {
@@ -36,7 +36,7 @@ window.renderStatistics = function (ctx, names, times) {
       ctx.fillStyle = 'rgba(0, 0, 255, ' + (Math.random() * 0.9 + 0.1) + ')';
     }
 
-    ctx.fillRect(initialX + indent * i + barWidth, initialY, barWidth, -(times[i] * step));
+    ctx.fillRect(initialX + indent * i, initialY, barWidth, -(times[i] * step));
 
     ctx.fillStyle = '#000';
     ctx.fillText(names[i], initialX + indent * i, initialY + 20);
