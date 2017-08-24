@@ -1,13 +1,12 @@
 'use strict';
 
 window.renderStatistics = function (ctx, names, times) {
-
   ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
   ctx.strokeRect(110, 20, 420, 270);
   ctx.fillRect(110, 20, 420, 270);
   ctx.fillStyle = 'white';
-  ctx.strokeRect(100, 10, 410, 260);
-  ctx.fillRect(100, 10, 410, 260);
+  ctx.strokeRect(100, 10, 420, 270);
+  ctx.fillRect(100, 10, 420, 270);
 
   ctx.fillStyle = '#000';
   ctx.font = '16px PT Mono';
