@@ -56,28 +56,15 @@ shuffledLastNames();
 shuffledCoatColors();
 shuffledEyesColors();
 
-var wizards = [
-  {
-    name: names[0] + ' ' + lastNames[0],
-    coatColor: coatColors[0],
-    eyesColor: eyesColors[0]
-  },
-  {
-    name: names[1] + ' ' + lastNames[1],
-    coatColor: coatColors[1],
-    eyesColor: eyesColors[1]
-  },
-  {
-    name: names[2] + ' ' + lastNames[2],
-    coatColor: coatColors[2],
-    eyesColor: eyesColors[2]
-  },
-  {
-    name: names[3] + ' ' + lastNames[3],
-    coatColor: coatColors[3],
-    eyesColor: eyesColors[3]
-  }
-];
+var wizards = [];
+
+for (var i = 0; i < 4; i++) {
+  wizards[i] = {
+    name: names[i] + ' ' + lastNames[i],
+    coatColor: coatColors[i],
+    eyesColor: eyesColors[i]
+  };
+}
 
 var renderWizard = function (wizard) {
   var wizardElement = similarWizardTemplate.cloneNode(true);
@@ -89,8 +76,8 @@ var renderWizard = function (wizard) {
 };
 
 var fragment = document.createDocumentFragment();
-for (var i = 0; i < wizards.length; i++) {
-  fragment.appendChild(renderWizard(wizards[i]));
+for (var j = 0; j < wizards.length; j++) {
+  fragment.appendChild(renderWizard(wizards[j]));
 }
 similarListElement.appendChild(fragment);
 
