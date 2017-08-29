@@ -11,50 +11,20 @@ var lastNames = ['да Марья', 'Верон', 'Мирабелла', 'Вал�
 var coatColors = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)', 'rgb(56, 159, 117)', 'rgb(215, 210, 55)', 'rgb(0, 0, 0)'];
 var eyesColors = ['black', 'red', 'blue', 'yellow', 'green'];
 
-var shuffledNames = function shuffleNames() {
-  for (var i = names.length - 1; i > 0; i--) {
+var shuffledArray = function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
-    var temp = names[i];
-    names[i] = names[j];
-    names[j] = temp;
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
   }
-  return names;
+  return array;
 };
 
-var shuffledLastNames = function shuffleLastNames() {
-  for (var i = lastNames.length - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    var temp = lastNames[i];
-    lastNames[i] = lastNames[j];
-    lastNames[j] = temp;
-  }
-  return lastNames;
-};
-
-var shuffledCoatColors = function shuffleCoatColors() {
-  for (var i = coatColors.length - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    var temp = coatColors[i];
-    coatColors[i] = coatColors[j];
-    coatColors[j] = temp;
-  }
-  return coatColors;
-};
-
-var shuffledEyesColors = function shuffleEyesColors() {
-  for (var i = eyesColors.length - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    var temp = eyesColors[i];
-    eyesColors[i] = eyesColors[j];
-    eyesColors[j] = temp;
-  }
-  return eyesColors;
-};
-
-shuffledNames();
-shuffledLastNames();
-shuffledCoatColors();
-shuffledEyesColors();
+shuffledArray(names);
+shuffledArray(lastNames);
+shuffledArray(coatColors);
+shuffledArray(eyesColors);
 
 var wizards = [];
 
