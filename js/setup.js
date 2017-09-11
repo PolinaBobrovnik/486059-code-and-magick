@@ -112,5 +112,5 @@ wizardEyes.addEventListener('click', function () {
 });
 
 setupFireballWrap.addEventListener('click', function () {
-  setupFireballWrap.style.textContent = 'bgcolor =  ' + fireballColors[getRandomInt(0, fireballColors.length - 1)];
+  setupFireballWrap.style.background = fireballColors[getRandomInt(0, fireballColors.length - 1)];
 });
