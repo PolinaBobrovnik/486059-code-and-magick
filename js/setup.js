@@ -59,6 +59,10 @@ similarListElement.appendChild(fragment);
 
 userDialog.querySelector('.setup-similar').classList.remove('hidden');
 
+
+
+
+
 var setup = document.querySelector('.setup');
 var setupOpen = document.querySelector('.setup-open');
 var setupClose = setup.querySelector('.setup-close');
@@ -80,7 +84,6 @@ var openPopup = function () {
 
 var closePopup = function () {
   setup.classList.add('hidden');
-  document.removeEventListener('keydown', onPopupEscPress);
 };
 
 setupOpen.addEventListener('click', function () {
